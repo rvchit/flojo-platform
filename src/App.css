@@ -2,37 +2,99 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 5px;
+  /* background-color: #282c34; */
+  color: white;
+  height: 60px;
+}
+
+.left-section,
+.center-section,
+.right-section {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.left-section {
+  justify-content: flex-start;
+}
+
+.right-section {
+  justify-content: flex-end;
+}
+
+.header-button {
+  background-color: #61dafb;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  color: #282c34;
+}
+
+.header-button:hover {
+  background-color: #21a1f1;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.input-container {
+  text-align: left;
+  font-size: 1.2em;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 260px;
+  justify-content: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-group span {
+  background-color: #282c34;
+  color: #61dafb;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 1em;
+}
+
+.input-group input {
+  padding: 10px;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 1em;
+  width: 15%;
+}
+
+.input-group input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+.suggestions {
+  position: absolute;
+  color: black;
+  font-size: 0.6em;
+  padding: 10px;
+  margin: 0px;
 }
